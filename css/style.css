@@ -1,0 +1,95 @@
+/*
+color palette
+https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5
+*/
+a:link, a:visited {
+    color:#000;
+    text-decoration:none
+}
+
+a:hover, a:focus, a:active {
+    color:#000;
+}
+div {
+    margin :0;
+}
+
+a.here {
+    color : #F75E2D;
+}
+
+body {
+    margin : 0px 0px 0px;
+    background-color : #fefefe;
+    font-family:verdana, arial, helvetica, sans-serif;
+    color:#04080F;
+}
+.container-horizontal-nav-bar {
+    margin:0;
+}
+.container-content {
+    height:1000px;
+    margin: 0% 10% 5%;
+    display:flex;
+}
+.container-welcome-box {
+    background-color : #04080f;
+    padding :3% 0% 3%;
+}
+
+
+.welcome-box {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: left;
+    color :#dae3e5;
+}
+
+
+.horizontal-nav-bar{
+    position:relative;
+    margin:0;
+    padding :10px 1px 10px;
+    background:#a1c6ea;
+}
+.vertical-nav-bar {
+    width:22%;
+    background-color : #eee;
+}
+.content{
+    padding : 33px;
+    width:77%;
+    /*border:1px groove #000;*/
+    background-color : #fff;
+    
+
+}
+
+.horizontal-nav-ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.vertical-nav-ul {
+    margin-top:14%;
+    margin-left : 14%;
+    margin-right : 0%;    
+    padding : 0;
+    list-style:none;
+}
+
+
+li.horizontal {
+    padding:5%;
+    display:inline;
+    text-align : center;
+    font-size: large;
+}
+
+li.vertical {
+    margin: 10% 0% 0%;
+    padding:3%;
+    background-color:#eee;
+    border-bottom: 3px solid #a1c6ea;
+    text-align : left;
+}
