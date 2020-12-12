@@ -61,16 +61,14 @@ body {
     width:77%;
     /*border:1px groove #000;*/
     background-color : #fff;
-    
-
 }
 
-.horizontal-nav-ul {
+.horizontal-nav-bar ul {
     margin:0;
     padding:0;
     list-style:none;
 }
-.vertical-nav-ul {
+.vertical-nav-bar ul {
     margin-top:14%;
     margin-left : 14%;
     margin-right : 0%;    
@@ -79,14 +77,14 @@ body {
 }
 
 
-li.horizontal {
+ .horizontal-nav-bar ul li {
     padding:5%;
     display:inline;
     text-align : center;
     font-size: large;
 }
 
-li.vertical {
+.vertical-nav-bar ul li {
     margin: 10% 0% 0%;
     padding:3%;
     background-color:#eee;
