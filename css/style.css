@@ -55,6 +55,7 @@ body {font-size : 14px;}
 .horizontal-nav-bar{
     position:relative;
     margin:0;
+	height : 30px;
     padding :10px 1px 10px;
     background:#a1c6ea;
 }
@@ -69,9 +70,9 @@ body {font-size : 14px;}
     background-color : #fff;
 }
 
-.horizontal-nav-bar ul {
-    margin:0;
-    padding:0;
+.horizontal-nav-bar ul{
+  	height :40px;
+	list-style :none;
 }
 .vertical-nav-bar ul {
     margin-top:14%;
@@ -79,14 +80,22 @@ body {font-size : 14px;}
     margin-right : 0%;    
     padding : 0;
 }
-
-
+	
  .horizontal-nav-bar ul li {
-    padding:5%;
-    display:inline;
-    text-align : center;
+  	text-align : center;
     font-size: large;
+	margin:0;
+    padding:0;
+	float : left;
+	position :relative;
+	list-style :none;
+    
 }
+
+	.horizontal-nav-bar li a {
+		display: block;
+		margin:0;
+	}
 
 .vertical-nav-bar ul li {
     margin: 10% 0% 0%;
@@ -95,6 +104,15 @@ body {font-size : 14px;}
     border-bottom: 3px solid #a1c6ea;
     text-align : left;
 }
+
+	.horizontal-nav-bar ul li ul {
+		position:absolute;
+	}
+	
+	.horizontal-nav-bar ul li ul li {
+		float: none;
+		font-size : 14px;
+	}
 }
 
 
