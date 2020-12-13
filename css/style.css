@@ -37,7 +37,7 @@ body {font-size : 14px;}
     display:flex;
 }
 .container-welcome-box {
-	background-image: url('/chaneeMinbak/img/IMP.jpeg');
+	background-image: url('/chaneeMinbak/img/IMP.jpeg') no-repeat center auto;
 	background-color : #ffffff;
     padding :3% 0% 3%;
 }
