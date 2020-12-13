@@ -30,6 +30,8 @@ body {font-size : 14px;}
 태블릿과 데스크탑의 공통 코드를 작성한다. */
 .container-horizontal-nav-bar {
     margin:0;
+	height : 40px;
+	background:#a1c6ea;
 }
 .container-content {
     height:1000px;
@@ -52,16 +54,19 @@ body {font-size : 14px;}
 }
 
 
-.horizontal-nav-bar{
-    position:relative;
+ul.horizontal-nav-bar{
+    list-style:none;
     margin:0;
 	height : 30px;
     padding :10px 1px 10px;
-    background:#a1c6ea;
 }
-.vertical-nav-bar {
+ul .vertical-nav-bar {
     width:22%;
     background-color : #eee;
+	margin-top:14%;
+    margin-left : 14%;
+    margin-right : 0%;    
+    padding : 0;
 }
 .content{
     padding : 33px;
@@ -70,34 +75,17 @@ body {font-size : 14px;}
     background-color : #fff;
 }
 
-.horizontal-nav-bar ul{
-  	height :40px;
-	list-style :none;
-}
-.vertical-nav-bar ul {
-    margin-top:14%;
-    margin-left : 14%;
-    margin-right : 0%;    
-    padding : 0;
-}
 	
- .horizontal-nav-bar ul li {
+ ul.horizontal-nav-bar li {
   	text-align : center;
     font-size: large;
 	margin:0;
     padding:0;
 	float : left;
 	position :relative;
-	list-style :none;
-    
 }
 
-	.horizontal-nav-bar li a {
-		display: block;
-		margin:0;
-	}
-
-.vertical-nav-bar ul li {
+.vertical-nav-bar li {
     margin: 10% 0% 0%;
     padding:3%;
     background-color:#eee;
@@ -105,14 +93,19 @@ body {font-size : 14px;}
     text-align : left;
 }
 
-	.horizontal-nav-bar ul li ul {
-		position:absolute;
-	}
+ul.horizontal-nav-bar li a {
+	display:block;
+}
 	
-	.horizontal-nav-bar ul li ul li {
-		float: none;
-		font-size : 14px;
-	}
+.horizontal-nav-bar li ul {
+	position :absolute;
+	text-align : center;
+}
+
+.horizontal-nav-bar ul li{
+	float: none;
+	font-size : 14px;
+}
 }
 
 
