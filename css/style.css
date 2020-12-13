@@ -4,9 +4,10 @@ a:link, a:visited { color:#000; text-decoration:none}
 a:hover, a:focus, a:active { color:#000;}
 div { margin :0;}
 a.here { color : #F75E2D; }
+ul, li { list-style:none; }
 body {
     margin : 0px 0px 0px;
-    background-image : url(/img/IMP.jpeg);
+   
     font-family: verdana, arial, helvetica, sans-serif;
     color:#04080F;
 }
@@ -19,8 +20,7 @@ body {
 미디어 쿼리를 지원하지 않는 모바일 기기를 위해 미디어 쿼리 구문을 사용하지 않는다. */
 
 body {font-size : 14px;}
-.container-welcome-box {
-}
+
 
 
 /* Tablet & Desktop Device */
@@ -28,7 +28,7 @@ body {font-size : 14px;}
 /* 사용자 해상도가 768px 이상일 때 이 코드가 실행됨.
 
 태블릿과 데스크탑의 공통 코드를 작성한다. */
-	.container-horizontal-nav-bar {
+.container-horizontal-nav-bar {
     margin:0;
 }
 .container-content {
@@ -37,7 +37,8 @@ body {font-size : 14px;}
     display:flex;
 }
 .container-welcome-box {
-    
+	background-image: url('/chaneeMinbak/img/IMP.jpeg');
+	background-color : #ffffff;
     padding :3% 0% 3%;
 }
 
@@ -70,14 +71,12 @@ body {font-size : 14px;}
 .horizontal-nav-bar ul {
     margin:0;
     padding:0;
-    list-style:none;
 }
 .vertical-nav-bar ul {
     margin-top:14%;
     margin-left : 14%;
     margin-right : 0%;    
     padding : 0;
-    list-style:none;
 }
 
 
