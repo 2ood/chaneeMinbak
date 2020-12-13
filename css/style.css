@@ -1,30 +1,34 @@
-/*
-color palette
-https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5
-*/
-a:link, a:visited {
-    color:#000;
-    text-decoration:none
-}
-
-a:hover, a:focus, a:active {
-    color:#000;
-}
-div {
-    margin :0;
-}
-
-a.here {
-    color : #F75E2D;
-}
-
+/* All Device */
+/* 모든 해상도를 위한 공통 코드를 작성한다. 모든 해상도에서 이 코드가 실행됨.*/
+a:link, a:visited { color:#000; text-decoration:none}
+a:hover, a:focus, a:active { color:#000;}
+div { margin :0;}
+a.here { color : #F75E2D; }
 body {
     margin : 0px 0px 0px;
-    background-color : #fefefe;
-    font-family:verdana, arial, helvetica, sans-serif;
+    background-image : url(/img/IMP.jpeg);
+    font-family: verdana, arial, helvetica, sans-serif;
     color:#04080F;
 }
-.container-horizontal-nav-bar {
+
+/* Mobile Device */
+/* 768px 미만 해상도의 모바일 기기를 위한 코드를 작성한다.
+
+모든 해상도에서 이 코드가 실행된다.
+
+미디어 쿼리를 지원하지 않는 모바일 기기를 위해 미디어 쿼리 구문을 사용하지 않는다. */
+
+body {font-size : 14px;}
+.container-welcome-box {
+}
+
+
+/* Tablet & Desktop Device */
+@media all and (min-width:768px) {
+/* 사용자 해상도가 768px 이상일 때 이 코드가 실행됨.
+
+태블릿과 데스크탑의 공통 코드를 작성한다. */
+	.container-horizontal-nav-bar {
     margin:0;
 }
 .container-content {
@@ -33,7 +37,7 @@ body {
     display:flex;
 }
 .container-welcome-box {
-    background-color : #04080f;
+    
     padding :3% 0% 3%;
 }
 
@@ -42,7 +46,7 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     text-align: left;
-    color :#dae3e5;
+    color :#ffffff;
 }
 
 
@@ -91,3 +95,25 @@ body {
     border-bottom: 3px solid #a1c6ea;
     text-align : left;
 }
+}
+
+
+
+/* Tablet Device */
+@media all and (min-width:768px) and (max-width:1024px) {
+
+/* 사용자 해상도가 768px 이상이고 1024px 이하일 때 이 코드가 실행됨.
+
+아이패드 또는 비교적 작은 해상도의 랩탑이나 데스크톱에 대응하는 코드를 작성한다. */
+}
+
+
+
+/* Desktop Device */
+
+@media all and (min-width:1025px) {
+
+/* 1025px 이상의 이상의 랩탑 또는 데스크탑에 대응하는 코드를 작성한다. */
+
+}
+
