@@ -100,6 +100,9 @@ ul.horizontal-nav-bar li a {
 .horizontal-nav-bar li ul {
 	position :absolute;
 	text-align : center;
+	left:0;
+	top:40px;
+	width:105px;
 }
 
 .horizontal-nav-bar ul li{
