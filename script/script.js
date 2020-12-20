@@ -10,3 +10,11 @@ function newCont(th) {
 function changePic() {
 	
 }
+
+function fetchPage(name){
+    fetch(name).then(function(response){
+      response.text().then(function(text){
+        document.querySelector('.content').innerHTML = text;
+      })
+    });
+  }

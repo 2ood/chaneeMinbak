@@ -1,17 +1,41 @@
 a, a:hover, a:visited {text-decoration:none; color : #efe;}
-.nav a{ text-transform:uppercase;}
-ul {list-style-type : none;}
-html { background-color:#000;}
-body { color : #999;}
-.content { background-color: #fff; color : #999;}
+div,ul,h1,h3 { margin:0;}
+
+
+@font-face {
+    font-family: 'juaregular';
+    src: url('font/jua-regular-webfont.woff2'),
+         url('font/jua-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+ul {list-style-type : none; padding : 0;}
+html { background-color:#fff; font-family: 'juaregular', serif;}
+body { color : #fff; margin:0; }
+.content { background-color : #fff; color : #999; padding : 30px;}
+.welcome-box { height : 300px; 
+	background-image : url('../img/noon-dong-i.jpg');
+	background-repeat :no-repeat;
+	background-position: center;
+	background-size : 100%;
+}
+.siteName {text-shadow : #000 1px 0 10px;}
+h1.siteName {font-size : 3em; padding-top : 120px;}
+h3.siteName {font-size : 1.25em;}
+
+.nav {align-content: center; background-color:#333;}
+.nav ul li a {  text-transform:uppercase; color : #fff;}
 
 .nav ul li {
-	padding: 1rem;
-	display: block; 
-	float : left;
+	padding: 1em;
+	display: inline-block;
 	transition-duration: 0.5s;
+	margin : 0.5em 1em;
 }
 .nav ul li ul {
+	padding : 0;
   	opacity: 0;
   	position: absolute;
   	margin-top: 1rem;
@@ -20,6 +44,11 @@ body { color : #999;}
 	background-color:#1ac;
 
 }
+#ul1{ margin-left:0;}
+#ul2{ margin-left:150px;}
+#ul3{ margin-left:300px;}
+#ul4{ margin-left:450px;}
+
 
 @media (max-width : 759px) {
 }
@@ -39,7 +68,6 @@ ul li ul:hover {
 ul li ul li {
   	clear: both;
   	width: 100%;
-  	padding: 1rem;
 	display: block; 
 	float : left;
 	transition-duration: 0.5s;
