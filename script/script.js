@@ -1,7 +1,12 @@
-
 var welc = document.getElementsByClassName('welcome-box');
 
-function newCont() {
+function newCont(th) {
+	console.log('clicked body');
 	var cont = document.getElementsByClassName('content');
-	cont.innerHTML="/html/"+this.value+".html";
+	var url  = '/html/'+th+'.html';
+	cont.innerHTML=url;
+}
+
+function changePic() {
+	
 }

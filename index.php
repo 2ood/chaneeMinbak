@@ -12,7 +12,7 @@
 		<ul>
 			<li><a href='#'>where?</a>
 				<ul>
-					<li><a href='#'>intro</a></li>
+					<li><a href='#' onclick="javascript:newCont('langingPage');">intro</a></li>
 					<li><a href='#'>services</a></li>
 					<li><a href='#'>announce</a></li>
 				</ul>
