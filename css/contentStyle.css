@@ -18,5 +18,5 @@ iframe {
 	border-style: none; 
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px 2px;
 }
-p {color : #000;}
+p {color : #000; margin-left: 10%; margin-right :10%;}
 p.ment {  font-size:2em; font-family:"Nanum Pen";}
