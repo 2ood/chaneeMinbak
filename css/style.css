@@ -1,16 +1,6 @@
 a, a:hover, a:visited {text-decoration:none; color : #efe;}
 div,ul,h1,h3 { margin:0;}
 
-
-@font-face {
-    font-family: 'juaregular';
-    src: url('font/jua-regular-webfont.woff2'),
-         url('font/jua-regular-webfont.woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
 ul {list-style-type : none; padding : 0;}
 html { background-color:#fff; font-family: 'juaregular', serif;}
 body { color : #fff; margin:0; }

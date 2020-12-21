@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'juaregular';
+    src: url('font/jua-regular-webfont.woff2'),
+         url('font/jua-regular-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Nanum Pen';
+    src: url('font/NanumPen.eot');
+    src: url('font/NanumPen.eot?#iefix') format('embedded-opentype'),
+        url('font/NanumPen.woff2') format('woff2'),
+        url('font/NanumPen.woff') format('woff'),
+        url('font/NanumPen.ttf') format('truetype'),
+        url('font/NanumPen.svg#NanumPen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

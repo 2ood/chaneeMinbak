@@ -3,8 +3,10 @@
 <head>
 	<title>Chanee's Minbak</title>
 	<meta charset='utf-8'>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='css/style.css'>
+	<link rel ='stylesheet' href='css/font.css'>
 	<script src='script/script.js'></script>
 </head>
 <body>
@@ -12,7 +14,7 @@
 		<ul>
 			<li><a href='#where?'>where?</a>
 				<ul id='ul1'>
-					<li><a href='#' onclick="fetchPage('html/landingPage.html')">intro</a></li>
+					<li><a href='#' onclick="fetchPage('html/intro.html')">intro</a></li>
 					<li><a href='#' onclick="fetchPage('html/service.html')">services</a></li>
 					<li><a href='#' onclick="fetchPage('html/announce.html')">announce</a></li>
 				</ul>
@@ -48,9 +50,18 @@
 	<!-- end of welcome-box-->
 	
 	<div class='content'>
-		<?php
-		
-		?>
+		<h1>Quick Reservation</h1>
+		<span class='quick-reserv'>
+		<form action='index.html' method='get'>
+		<input type="date" id="start" name="trip-start"
+       value="2020-12-25"
+       min="2020-12-01" max="2021-02-28"> ~ <input type="date" id="stop" name="trip-stop"
+       value="2020-12-27"
+       min="2020-12-01" max="2021-02-28"> 
+		<input class='search-reserv' type='submit' value='Search'/>
+		</form>
+			
+		</span>
 	</div>
 	<!-- end of contents-->
 	
