@@ -6,7 +6,7 @@ for (var i = 0; i < parts.length; i++) {
 }
 
 var welc = document.getElementsByClassName('welcome-box');
-
+var home = document.getElementsByClassName('home');
 function newCont(th) {
 	console.log('clicked body');
 	var cont = document.getElementsByClassName('content');
@@ -30,7 +30,8 @@ const button = document.querySelector('.search-reserv');
 button.onclick = checkBook();
 
 function checkBook() {
-	if(($_GET['trip-start']!=null) || ($_GET['trip-stop']!=null) ) {fetchPage('html/book.html');} 
+	if(($_GET['trip-start']!=null) || ($_GET['trip-stop']!=null) )
+		fetchPage('html/book.html');
 else ;	
 }
 
