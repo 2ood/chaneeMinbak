@@ -11,6 +11,16 @@ body { color : #000; margin:0; }
 	background-position: center;
 	background-size : 100%;
 }
+.previous {
+	float : left;
+	top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    height: 100px; 
+    width: 200px; 
+    border-radius: 150px 150px 0 0; 
+    background-color: green; 
+}
 .footer { color :#8f8fff; border-radius: 30px; margin :10px; padding : 2em; padding-top:3em; text-align : center; background-color : #eef; font-family: Arial; font-weight:bold; line-height:27px; letter-spacing:1px;}
 .footer a {color:#8f8fff; text-decoration:underline; }
 .footer a:hover {text-decoration:none;}
