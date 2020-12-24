@@ -6,21 +6,46 @@ html { background-color:#fff; font-family: 'juaregular', serif;}
 body { color : #000; margin:0; }
 .content { background-color : #fff; color : #999; padding : 30px; margin-bottom:30px;}
 .welcome-box { height : 300px; 
-	background-image : url('../img/diningRoom.jpg');
+	background-image : url('../img/diningRoom1.jpg');
 	background-repeat :no-repeat;
 	background-position: center;
 	background-size : 100%;
 }
-.previous {
-	float : left;
-	top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    height: 100px; 
-    width: 200px; 
-    border-radius: 150px 150px 0 0; 
-    background-color: green; 
+.welcome-box .change-prev {
+	position : absolute;
+	top: calc(128px); 
+    transform: translate(0,0); 
+    height: 150px; 
+    width: 80px; 
+    background-color: white; 
+	border-radius: 0 75px 75px 0;
+	left: 0; 
+	opacity: 0.3;
+	display: flex;
+  	justify-content: center;
+  	align-content: center;
+  	flex-direction: column;
+	font-size : 5em;
 }
+
+.welcome-box .change-next {
+	position : absolute;
+	top: calc(128px);  
+    right: 0; 
+    transform: translate(0,0); 
+    height: 150px; 
+    width: 80px; 
+    border-radius: 75px 0 0 75px; 
+    background-color: white; 
+	opacity: 0.3;
+	display: flex;
+	text-align: right;
+  	justify-content: center;
+  	align-content: center;
+  	flex-direction: column;
+	font-size : 5em;
+}
+
 .footer { color :#8f8fff; border-radius: 30px; margin :10px; padding : 2em; padding-top:3em; text-align : center; background-color : #eef; font-family: Arial; font-weight:bold; line-height:27px; letter-spacing:1px;}
 .footer a {color:#8f8fff; text-decoration:underline; }
 .footer a:hover {text-decoration:none;}

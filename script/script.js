@@ -1,3 +1,4 @@
+// use GET variables from URL
 var parts = window.location.search.substr(1).split("&");
 var $_GET = {};
 for (var i = 0; i < parts.length; i++) {
@@ -5,17 +6,30 @@ for (var i = 0; i < parts.length; i++) {
     $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
 }
 
-var welc = document.getElementsByClassName('welcome-box');
-var home = document.getElementsByClassName('home');
-function newCont(th) {
-	console.log('clicked body');
-	var cont = document.getElementsByClassName('content');
-	var url  = '/html/'+th+'.html';
-	cont.innerHTML=url;
-}
+// make variables from html components
+const welc = document.getElementsByClassName('welcome-box');
+const welcPicNum = 2;
+const home = document.getElementsByClassName('home');
+const bookCheck = document.querySelector('.search-reserv');
+const prevButton = document.querySelector('.change-prev');
+const nextButton = document.querySelector('.change-next');
+
+//assign onclick function
+bookCheck.onclick = checkBook();
+prevButton.setAttribute("onclick", "changePic()");
+nextButton.onclick = changePic();
+
+var bgArr = [
+  "img/diningRoom1.jpg",
+  "img/diningRoom2.jpg",
+];
+
 
 function changePic() {
-	
+	console.log("Hello");
+	let s = document.body.style.backgroundImage;
+	if(s===bgArr[0]) document.body.style.backgroundImage=bgArr[1];
+	else document.body.style.backgroundImage=bgArr[0];
 }
 
 function fetchPage(name){
@@ -25,9 +39,6 @@ function fetchPage(name){
       })
     });
   }
-
-const button = document.querySelector('.search-reserv');
-button.onclick = checkBook();
 
 function checkBook() {
 	if(($_GET['trip-start']!=null) || ($_GET['trip-stop']!=null) )
