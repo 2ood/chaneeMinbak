@@ -5,8 +5,8 @@ ul {list-style-type : none; padding : 0;}
 html { background-color:#fff; font-family: 'juaregular', serif;}
 body { color : #000; margin:0; }
 .content { background-color : #fff; color : #999; padding : 30px; margin-bottom:30px;}
-.welcome-box { height : 300px; 
-	background-image : url('../img/diningRoom1.jpg');
+.welcome-box { height : 300px;
+	background-image : url('/military-service/chaneeMinbak/img/noon-dong-i.jpg');
 	background-repeat :no-repeat;
 	background-position: center;
 	background-size : 100%;
@@ -27,6 +27,7 @@ body { color : #000; margin:0; }
   	flex-direction: column;
 	font-size : 5em;
 }
+.welcome-box a { text-decoration:none; color : #000;}
 
 .welcome-box .change-next {
 	position : absolute;

@@ -7,30 +7,15 @@ for (var i = 0; i < parts.length; i++) {
 }
 
 // make variables from html components
-const welc = document.getElementsByClassName('welcome-box');
-const welcPicNum = 2;
 const home = document.getElementsByClassName('home');
 const bookCheck = document.querySelector('.search-reserv');
 const prevButton = document.querySelector('.change-prev');
 const nextButton = document.querySelector('.change-next');
 
 //assign onclick function
-bookCheck.onclick = checkBook();
-prevButton.setAttribute("onclick", "changePic()");
-nextButton.onclick = changePic();
-
-var bgArr = [
-  "img/diningRoom1.jpg",
-  "img/diningRoom2.jpg",
-];
-
-
-function changePic() {
-	console.log("Hello");
-	let s = document.body.style.backgroundImage;
-	if(s===bgArr[0]) document.body.style.backgroundImage=bgArr[1];
-	else document.body.style.backgroundImage=bgArr[0];
-}
+//bookCheck.onclick = checkBook(true);
+//prevButton.setAttribute("onclick", "changePic()");
+//nextButton.onclick = changePic();
 
 function fetchPage(name){
     fetch(name).then(function(response){
@@ -40,9 +25,43 @@ function fetchPage(name){
     });
   }
 
-function checkBook() {
+function fetchImage(div, name) {
+	fetch(name).then(function(response){
+      response.text().then(function(text){
+        document.querySelector(div).backgroundImage=text;
+      })
+    });
+  }
+
+function checkBook(flag) {
 	if(($_GET['trip-start']!=null) || ($_GET['trip-stop']!=null) )
 		fetchPage('html/book.html');
 else ;	
 }
+
+
+
+function changePic(flag) {
+	var welc = document.querySelector('.welcome-box');
+	function backImage(num) {
+	var backImages= [
+		"noon-dong-i.jpg",
+		"diningRoom1.jpg",
+		"diningRoom2.jpg"
+	];
+	return "url('/military-service/chaneeMinbak/img/"+backImages[num]+"')";
+}
+	let s =Number(welc.getAttribute('name'));
+	console.log(s);
+	let index;
+	switch (s) {
+		default : {index=1;break;} 
+		case 1 : {index=2; break;} 
+		case 2 : {index=0; break;} 
+	}
+	welc.style.backgroundImage= backImage(index);
+	welc.setAttribute('name',index);
+}
+
+
 
