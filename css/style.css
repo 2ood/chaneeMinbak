@@ -5,13 +5,18 @@ ul {list-style-type : none; padding : 0;}
 html { background-color:#fff; font-family: 'juaregular', serif; }
 body { color : #000; margin:0;}
 .content { background-color : #fff; color : #999; padding : 30px; margin-bottom:30px;z-index=5;}
-.welcome-box { height : 300px; overflow:hidden;}
-#welcome-backg {
-	width: 100%;
-	height : 300px;
-	overflow : hidden;
-	position:absolute;
+.welcome-box { height : 300px; overflow:hidden; display : flex-start;}
+.welcome-box img {
+	width: 100%; 
+	height:300px;
+	position: absolute;
+	object-fit : cover;
+	z-index: 0;
 }
+
+#welcome-backg0 {display : inline;}
+#welcome-backg1 {display : none;}
+#welcome-backg2 {display : none;}
 
 .welcome-box .change-prev {
 	position : absolute;
@@ -28,6 +33,7 @@ body { color : #000; margin:0;}
   	align-content: center;
   	flex-direction: column;
 	font-size : 5em;
+	z-index:1;
 }
 .welcome-box a { text-decoration:none; color : #000;}
 
@@ -47,6 +53,7 @@ body { color : #000; margin:0;}
   	align-content: center;
   	flex-direction: column;
 	font-size : 5em;
+	z-index:1;
 }
 
 .footer { color :#8f8fff; border-radius: 30px; margin :10px; padding : 2em; padding-top:3em; text-align : center; background-color : #eef; font-family: Arial; font-weight:bold; line-height:27px; letter-spacing:1px;}
@@ -64,7 +71,7 @@ img.home { width:20px; height:20px; padding-left:10px; float:left;}
 
 .nav ul li {padding: 1em; display: inline-block; transition-duration: 0.5s; margin : 0.5em 1em 0 1em;}
 
-.nav ul li a :hover {  z-index :0;}
+.nav ul li a :hover { z-index :10;}
 .nav ul li ul {
 	padding : 0;
   	opacity: 0;
@@ -73,6 +80,7 @@ img.home { width:20px; height:20px; padding-left:10px; float:left;}
   	left: 0;
   	display: none;
 	background-color:#1ac;
+	z-index :10;
 
 }
 #ul1{ margin-left:110px; }
@@ -89,7 +97,7 @@ img.home { width:20px; height:20px; padding-left:10px; float:left;}
 
 
 ul li:hover > ul,
-ul li ul:hover {visibility: visible; opacity: 1; display: block;  z-index :0;}
+ul li ul:hover {visibility: visible; opacity: 1; display: block;  z-index :10;}
 
 ul li ul li {clear: both; width: 100%; display: block; float : left; transition-duration: 0.5s;  z-index :0;}
 	ul li ul li a:hover { text-decoration:underline;}
