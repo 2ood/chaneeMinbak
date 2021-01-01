@@ -42,25 +42,30 @@ else ;
 
 
 function changePic(flag) {
+	var welcbackg = document.querySelectorAll('.welcome-box img');
 	var welc = document.querySelector('.welcome-box');
-	function backImage(num) {
-	var backImages= [
-		"noon-dong-i.jpg",
-		"diningRoom1.jpg",
-		"diningRoom2.jpg"
-	];
-	return "url('/military-service/chaneeMinbak/img/"+backImages[num]+"')";
-}
-	let s =Number(welc.getAttribute('name'));
-	console.log(s);
+	console.log('clicked'+flag);
+	
+	let status =Number(welc.getAttribute('name'));
+	//console.log(s);
 	let index;
-	switch (s) {
-		default : {index=1;break;} 
-		case 1 : {index=2; break;} 
-		case 2 : {index=0; break;} 
+	let len= welcbackg.length;
+	if(flag) {
+		if(len===status+1) index=0;
+		else index = status+1;
 	}
-	welc.style.backgroundImage= backImage(index);
+	else {
+		if(status===0) index=len-1;
+		else index = status-1;
+	}
+	
+	let j=0;
+	for(; j<len ;  j++) {
+		if (j===index) welcbackg[j].setAttribute('style',"display:inline;");
+		else welcbackg[j].setAttribute('style',"display:none;");
+	}
 	welc.setAttribute('name',index);
+	
 }
 
 
