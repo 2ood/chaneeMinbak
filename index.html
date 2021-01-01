@@ -11,37 +11,44 @@
 	<script src='script/script.js'></script>
 </head>
 <body>
+	<div class='container-nav'>
 	<div class='nav'>
 		<ul>
-			<li style='margin:0;'><a href='index.html' style='color:#F0B7A4;'class='home'><img class='home' src='img/snoopy.ico' >HOME</a></li>
-			<li><a href='#where?'>where?</a>
+			<span class='container-homes'>
+			<li><a href='index.html' style='color:#F0B7A4;' class='homeText'><img class='home' src='img/snoopy.ico' >HOME</a></li> 
+			<li><a href="#" onclick="openHam();"><img class='hamburger' src='img/hamburger.png' > </a></li>
+			</span>
+			<span class='container-nonhomes' name="0">
+			<li class='where'><a href='#where?'>where?</a>
 				<ul id='ul1'>
 					<li><a href='#intro' onclick="fetchPage('html/intro.html')">intro</a></li>
 					<li><a href='#service' onclick="fetchPage('html/service.html')">services</a></li>
 					<li><a href='#announce' onclick="fetchPage('html/404.html')">announce</a></li> 
 				</ul>
 			</li>
-			<li><a href='#reservation'>reservation</a>
+			<li class='reserv'><a href='#reservation'>reservation</a>
 				<ul id='ul2'>
 					<li><a href='#status' onclick="fetchPage('html/404.html')">status</a></li>
 					<li><a href='#book' onclick="fetchPage('html/404.html')">book</a></li>
 					<li><a href='#rule' onclick="fetchPage('html/rule.html')">rule</a></li>
 				</ul>
 			</li>
-			<li><a href='#'>stories</a>
+			<li class='stories'><a href='#'>stories</a>
 				<ul id='ul3'>
 					<li><a href='#photos' onclick="fetchPage('html/404.html')">photos</a></li>
 					<li><a href='#reviews' onclick="fetchPage('html/404.html')">reviews</a></li>
 				</ul>
 			</li>
-			<li><a href='#'>etc.</a>
+			<li class='etc'><a href='#'>etc.</a>
 				<ul id='ul4'>
-					<li><a href='#traffic' onclick="fetchPage('html/404.html')">traffic</a></li>
+					<li><a href='#traffic' onclick="fetchPage('html/traffic.html')">traffic</a></li>
 					<li><a href='#FAQ' onclick="fetchPage('html/404.html')">FAQ</a></li>
 					<li><a href='#QnA' onclick="fetchPage('html/404.html')">Q&amp;A</a></li>
 				</ul>
 			</li>
+			</span>
 		</ul>
+	</div>	
 	</div>
 	<!-- end of nav bar-->
 	

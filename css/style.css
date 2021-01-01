@@ -4,7 +4,8 @@ div,ul,h1,h3 { margin:0;}
 ul {list-style-type : none; padding : 0;}
 html { background-color:#fff; font-family: 'juaregular', serif; }
 body { color : #000; margin:0;}
-.content { background-color : #fff; color : #999; padding : 30px; margin-bottom:30px;z-index=5;}
+
+.content { background-color : #fff; color : #333; padding : 30px; margin-bottom:30px;z-index=5;}
 .welcome-box { height : 300px; overflow:hidden; display : flex-start;}
 .welcome-box img {
 	width: 100%; 
@@ -63,9 +64,47 @@ body { color : #000; margin:0;}
 .siteName { color : #fff; text-shadow : #000 1px 0 10px; position:absolute;}
 h1.siteName {;font-size : 3em; padding-top : 120px; position : relative;}
 h3.siteName {font-size : 1.25em; position : relative;}
-a.home { font-family: 'Nanum Pen'; font-size:1.5em; }
-img.home { width:20px; height:20px; padding-left:10px; float:left;}
+a.homeText { font-family: 'Nanum Pen'; font-size:1.5em; display :inline-block;}
+img.home { width:20px; height:20px; padding-left:10px; float:left; display :inline-block;}
+img.hamburger { width:20px; height:20px; position:absolute; right : 10px; top :10px;}
 
+.container-nav {background-color:#333; height : 40px;}
+.container-nonhomes {display:none; background-color :#333; position:relative; z-index:30;}
+.nav {align-content: right; background-color:#333; display:inline-grid; grid-template-columns:2fr;
+  grid-auto-rows: 2fr;}
+.nav ul li a {  text-transform:uppercase; color : #fff;}
+.nav .where { 	grid-column: 1 ; grid-row: 1; }
+.nav .reserv { 	grid-column: 2 ; grid-row: 1; }
+.nav .stories { 	grid-column: 1 ; grid-row: 2; }
+.nav .etc { 	grid-column: 2 ; grid-row: 2; }
+
+.nav ul li { display: inline-block;  margin : 0.5em 1em 0 1em;}
+
+.nav ul li a :hover { z-index :10;}
+.nav ul li ul {
+	padding : 0;
+  	opacity: 0;
+  	position: auto;
+  	margin-top: 1rem;
+  	left: 0;
+	z-index :10;
+	visibility: visible;
+	opacity: 1;
+	display: block;
+}
+
+.nav ul li ul li { clear: both; width: 100%; display: block; float : left;  z-index :0;}
+	ul li ul li a:hover { text-decoration:underline;}
+
+@media (max-width : 759px) {
+}
+
+
+@media (min-width : 760px) {
+img.hamburger { display:none; }
+.container-nav {height : 61px;}
+.container-nonhomes {display:inline-block;}
+	
 .nav {align-content: center; background-color:#333;}
 .nav ul li a {  text-transform:uppercase; color : #fff;}
 
@@ -76,29 +115,21 @@ img.home { width:20px; height:20px; padding-left:10px; float:left;}
 	padding : 0;
   	opacity: 0;
   	position: absolute;
-  	margin-top: 1rem;
+  	margin-top: 0.8em;
   	left: 0;
   	display: none;
 	background-color:#1ac;
 	z-index :10;
 
 }
-#ul1{ margin-left:110px; }
-#ul2{ margin-left:260px; }
-#ul3{ margin-left:410px; }
-#ul4{ margin-left:520px; }
+#ul1{ margin-left:0; }
+#ul2{ margin-left:160px; }
+#ul3{ margin-left:300px; }
+#ul4{ margin-left:420px; }
+	
+.nav ul li:hover > ul,
+.nav ul li ul:hover {visibility: visible; opacity: 1; display: block;  z-index :10;}
 
-
-@media (max-width : 759px) {
-}
-
-
-@media (min-width : 760px) {
-
-
-ul li:hover > ul,
-ul li ul:hover {visibility: visible; opacity: 1; display: block;  z-index :10;}
-
-ul li ul li {clear: both; width: 100%; display: block; float : left; transition-duration: 0.5s;  z-index :0;}
-	ul li ul li a:hover { text-decoration:underline;}
+.nav ul li ul li {clear: both; width: 100%; display: block; float : left; transition-duration: 0.5s;  z-index :0;}
+.nav ul li ul li a:hover { text-decoration:underline;}
 }

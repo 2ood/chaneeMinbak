@@ -11,9 +11,10 @@ const home = document.getElementsByClassName('home');
 const bookCheck = document.querySelector('.search-reserv');
 const prevButton = document.querySelector('.change-prev');
 const nextButton = document.querySelector('.change-next');
+const hamburger = document.querySelector('.hamburger');
 
 //assign onclick function
-//bookCheck.onclick = checkBook(true);
+bookCheck.onclick = checkBook(true);
 //prevButton.setAttribute("onclick", "changePic()");
 //nextButton.onclick = changePic();
 
@@ -39,8 +40,14 @@ function checkBook(flag) {
 else ;	
 }
 
-
-
+function openHam() {
+	console.log('openham');
+	var nonhomes = document.querySelector('.container-nonhomes');
+	let flag = Number(nonhomes.getAttribute('name'));
+	console.log(flag);
+	if (flag===0) { nonhomes.setAttribute('style','display:inline-block;'); nonhomes.setAttribute('name',1); }
+	else {nonhomes.setAttribute('style','display:none;');nonhomes.setAttribute('name',0); }
+}
 function changePic(flag) {
 	var welcbackg = document.querySelectorAll('.welcome-box img');
 	var welc = document.querySelector('.welcome-box');
