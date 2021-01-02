@@ -12,7 +12,7 @@ body { color : #000; margin:0;}
 	height:300px;
 	position: absolute;
 	object-fit : cover;
-	z-index: 0;
+	z-index: -1;
 }
 
 #welcome-backg0 {display : inline;}
@@ -68,15 +68,12 @@ a.homeText { font-family: 'Nanum Pen'; font-size:1.5em; display :inline-block;}
 img.home { width:20px; height:20px; padding-left:10px; float:left; display :inline-block;}
 img.hamburger { width:20px; height:20px; position:absolute; right : 10px; top :10px;}
 
-.container-nav {background-color:#333; height : 40px;}
+.container-nav {background-color:#333; height : 40px; z-index:50;}
 .container-nonhomes {display:none; background-color :#333; position:relative; z-index:30;}
 .nav {align-content: right; background-color:#333; display:inline-grid; grid-template-columns:2fr;
   grid-auto-rows: 2fr;}
-.nav ul li a {  text-transform:uppercase; color : #fff;}
-.nav .where { 	grid-column: 1 ; grid-row: 1; }
-.nav .reserv { 	grid-column: 2 ; grid-row: 1; }
-.nav .stories { 	grid-column: 1 ; grid-row: 2; }
-.nav .etc { 	grid-column: 2 ; grid-row: 2; }
+.nav ul li a {  text-transform:uppercase; color : coral;}
+.nav ul li ul li a {  text-transform:uppercase; color : white;}
 
 .nav ul li { display: inline-block;  margin : 0.5em 1em 0 1em;}
 
@@ -95,6 +92,42 @@ img.hamburger { width:20px; height:20px; position:absolute; right : 10px; top :1
 
 .nav ul li ul li { clear: both; width: 100%; display: block; float : left;  z-index :0;}
 	ul li ul li a:hover { text-decoration:underline;}
+
+#to-the-top {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#to-the-top::after {
+  content: "\f077";
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#to-the-top:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#to-the-top:active {
+  background-color: #555;
+}
+#to-the-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 @media (max-width : 759px) {
 }

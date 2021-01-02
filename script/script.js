@@ -77,3 +77,19 @@ function changePic(flag) {
 
 
 
+$(window).scroll(function() {
+	var btn = $('#to-the-top');
+  if ($(window).scrollTop() > 3) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+
