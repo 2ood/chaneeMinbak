@@ -137,10 +137,11 @@ img.hamburger { width:20px; height:20px; position:absolute; right : 10px; top :1
 
 @media (min-width : 760px) {
 img.hamburger { display:none; }
-.container-nav {height : 61px;}
-.container-nonhomes {display:inline-block;}
+.container-nav {height : 65px;}
+.container-nonhomes {display:inline-block; height:59px;}
 	
 .nav {align-content: center; background-color:#333;}
+.nav > ul {height: 65px;}
 .nav ul li a {  text-transform:uppercase; color : #fff;}
 
 .nav ul li {padding: 1em; display: inline-block; transition-duration: 0.5s; margin : 0.5em 1em 0 1em;}
