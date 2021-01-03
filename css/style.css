@@ -130,8 +130,7 @@ img.hamburger { width:20px; height:20px; position:absolute; right : 10px; top :1
   visibility: visible;
 }
 
-
-
+.quick-reserv {display:block; }
 @media (max-width : 759px) {
 }
 
@@ -168,4 +167,6 @@ img.hamburger { display:none; }
 
 .nav ul li ul li {clear: both; width: 100%; display: block; float : left; transition-duration: 0.5s;  z-index :0;}
 .nav ul li ul li a:hover { text-decoration:underline;}
+	
+.quick-reserv {display:inline-block; margin-left:40px;}
 }
