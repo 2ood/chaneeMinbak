@@ -1,9 +1,9 @@
 <!-- this is the main template for the entire website.-->
 <html>
 <head>
-	<title>Chanee's Minbak</title>
+	<title>환영합니다 | 차니 민박</title>
 	<meta charset='utf-8'>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='css/style.css'>
 	<link rel ='stylesheet' href='css/font.css'>
@@ -11,88 +11,91 @@
 	<script src='script/script.js'></script>
 </head>
 <body>
-	<a id="to-the-top"></a>
-	<div class='container-nav'>
-	<div class='nav'>
-		<ul>
-			<span class='container-homes'>
-			<li><a href='index.html' style='color:#F0B7A4;' class='homeText'><img class='home' src='img/snoopy.ico' >HOME</a></li> 
-			<li><a href="#" onclick="openHam();"><img class='hamburger' src='img/hamburger.png' > </a></li>
-			</span>
-			<span class='container-nonhomes' name="0">
-			<li class='where'><a href='#where?'>where?</a>
-				<ul id='ul1'>
-					<li><a href='#intro' onclick="fetchPage('html/intro.html')">intro</a></li>
-					<li><a href='#service' onclick="fetchPage('html/service.html')">services</a></li>
-					<li><a href='#announce' onclick="fetchPage('html/404.html')">announce</a></li> 
+	<nav>
+		<h1 id="logo">차니 민박</h1>
+		<img id="ham" src='img/hamburger.png'>
+		<ul id="main-nav-ul">
+			<li id="where">
+				<label for="ul-where">민박 소개</label>
+				<ul class="nested-ul" id='ul-where'>
+					<li>소개글</li>
+					<li>서비스</li>
+					<li>공지</li>
 				</ul>
 			</li>
-			<li class='reserv'><a href='#reservation'>reservation</a>
-				<ul id='ul2'>
-					<li><a href='#status' onclick="fetchPage('html/404.html')">status</a></li>
-					<li><a href='#book' onclick="fetchPage('html/404.html')">book</a></li>
-					<li><a href='#rule' onclick="fetchPage('html/rule.html')">rule</a></li>
+			<li id="reservation">
+				<label for="ul-reservation">예약</label>
+				<ul class="nested-ul" id='ul-reservation'>
+					<li>예약 현황</li>
+					<li>예약 하기</li>
+					<li>규칙</li>
 				</ul>
 			</li>
-			<li class='stories'><a href='#'>stories</a>
-				<ul id='ul3'>
-					<li><a href='#photos' onclick="fetchPage('html/404.html')">photos</a></li>
-					<li><a href='#reviews' onclick="fetchPage('html/404.html')">reviews</a></li>
+			<li id='stories'>
+				<label for="ul-stories">이야기</label>
+				<ul class="nested-ul" id='ul-stories'>
+					<li>사진</li>
+					<li>리뷰</li>
 				</ul>
 			</li>
-			<li class='etc'><a href='#'>etc.</a>
-				<ul id='ul4'>
-					<li><a href='#traffic' onclick="fetchPage('html/traffic.html')">traffic</a></li>
-					<li><a href='#FAQ' onclick="fetchPage('html/404.html')">FAQ</a></li>
-					<li><a href='#QnA' onclick="fetchPage('html/404.html')">Q&amp;A</a></li>
+			<li id='etc'>
+				<label for="ul-etc">etc</label>
+				<ul class="nested-ul" id='ul-etc'>
+					<li>traffic</li>
+					<li>FAQ</li>
+					<li>Q&A</li>
 				</ul>
 			</li>
-			</span>
 		</ul>
-	</div>	
-	</div>
-	<!-- end of nav bar-->
-	
-	
-	<div class='welcome-box' name="0">
-		<img id='welcome-backg0' src='img/diningRoom1.jpg'>
-		<img id='welcome-backg1' src='img/diningRoom2.jpg'>
-		<img id='welcome-backg2' src='img/noon-dong-i.jpg'>
-		
-		<a href="#" onclick='changePic(false);' class='change-prev'>&lt;</a>
-		<center> <h1 class='siteName'> 차니 민박   	</h1></center>
-		<center> <h3 class='siteName'>놀러 오세요!	</h3></center>
-		<a href="#" onclick='changePic(true);' class='change-next'>&gt;</a>
-	</div>
-	<!-- end of welcome-box-->
-	
-	<div class='content'>
-		<span style='font-size:2em; display:inline-block text-align:bottom;'>Quick Reservation</span>
-		<span class='quick-reserv' >
-		<form action='index.html' method='get'>
-		<input type="date" id="start" name="trip-start"
-       value="2020-12-25"
-       min="2020-12-01" max="2021-02-28"> ~ <input type="date" id="stop" name="trip-stop"
-       value="2020-12-27"
-       min="2020-12-01" max="2021-02-28"> 
-		<input class='search-reserv' type='submit' value='Search'/>
-		</form>
-			
+	</nav>
+	<main>
+		<welcome-box>
+			<button type="button" class="banner-button" id='change-prev'><</button>
+			<banner-container class="first">
+				<banner>
+					<img id='welcome-backg0' src='img/diningRoom1.jpg'>
+				</banner>
+				<banner>
+					<img id='welcome-backg1' src='img/diningRoom2.jpg'>
+				</banner>
+				<banner>
+					<img id='welcome-backg2' src='img/noon-dong-i.jpg'>
+				</banner>
+			</banner-container>
+			<button type="button" class="banner-button" id='change-next'>></button>
+			<h1>차니 민박</h1>
+			<h3>놀러 오세요!</h3>
+		</welcome-box>
+		<span id="quick-reserv">
+			<h6>빠른 예약</h6>
+			<form action='index.html' method='get'>
+			<input type="date" class="quick-date" name="trip-start"
+				 value="2020-12-25"
+				 min="2020-12-01" max="2021-02-28"> ~ <input type="date" class="quick-date" name="trip-stop"
+				 value="2020-12-27"
+				 min="2020-12-01" max="2021-02-28">
+			<input class='search-reserv' id="quick-submit" type='submit' value='Search'/>
+			</form>
 		</span>
-		<p class='ment'>
-		놀러 오세요!	
-		</p>
-	</div>
+		<content>
+
+			<center>
+				<h1>WELCOME</h1>
+			</center>
+		</content>
+	</main>
 	<!-- end of contents-->
-	
-	<div class='footer'>
-		<hr/>
-		designed &amp; managed by 200d /
-		<a href='https://github.com/2ood/chaneeMinbak' target='_blank' title='open in new tab'>github repo.</a>
-		<br>kyungmin.choi@gistory.me
-		<br>all rights reserved.
-	</div>
-	<!-- end of footer-->
+
+	<footer>
+		<left>
+			주소 : 강원도 평창군
+		</left>
+		<right>
+			designed & managed by 2ood /
+			<a href='https://github.com/2ood/chaneeMinbak' target='_blank' title='open in new tab'>github repo.</a>
+			<br>MIT licensed.
+		</right>
+	</footer>
 </body>
-	
+
 </html>
