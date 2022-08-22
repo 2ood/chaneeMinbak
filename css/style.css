@@ -17,8 +17,8 @@ p {font-size: 18px;}
   --font-size-h6 : 20px;
   --normal-size : 18px;
 
-	--nav-shrink-height : 110px;
-	--nav-stretch-height : 220px;
+	--nav-shrink-height : 150px;
+	--nav-stretch-height : 260px;
 
 	--welcome-box-height : 60vh;
 }
@@ -60,10 +60,12 @@ nav:hover {
 
 nav h1#logo {
 	font-size : var(--font-size-h3);
+	margin : 20px 0;
 }
 
 nav label {
 	font-size : var(--font-size-h4);
+	min-height : 30px;
 }
 
 nav label:after {
@@ -73,10 +75,6 @@ nav label:after {
 	width : 100%;
 	margin-top : 5px;
 	border : 1px white solid;
-}
-
-#ham {
-	display : none;
 }
 
 #main-nav-ul {
@@ -170,7 +168,7 @@ button.banner-button {
   width: 80px;
 	border-radius: 80px;
 	top : 50%;
-  align-content: center;
+  align-items: center;
 	font-size: 2em;
 }
 
@@ -260,11 +258,15 @@ footer a {
     --font-size-h6 : 14px;
     --normal-size : 14px;
 
-		--nav-shrink-height : 80px;
-		--nav-stretch-height : 200px;
+		--nav-shrink-height : 100px;
+		--nav-stretch-height : 220px;
 
 		--welcome-box-height : 60vh;
   }
+
+	nav h1#logo {
+		margin : 10px 0;
+	}
 
 	banner img {
 		height : 100%;

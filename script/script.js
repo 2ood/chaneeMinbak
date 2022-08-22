@@ -1,20 +1,74 @@
-// use GET variables from URL
-var parts = window.location.search.substr(1).split("&");
+const urlParams = new URLSearchParams(window.location.search);
+
+let page_name = urlParams.get("page");
+if(page_name) showContent(page_name);
 
 window.addEventListener("load",function(evt){
-  const home = document.getElementsByClassName('home');
+  const logo = document.getElementById('logo');
   const bookCheck = document.querySelector('.search-reserv');
   const prevButton = document.getElementById('change-prev');
   const nextButton = document.getElementById('change-next');
-  const ham = document.getElementById('ham');
-  ham.addEventListener("click",openHam);
+
   prevButton.addEventListener("click",changePic);
   nextButton.addEventListener("click",changePic);
+
+  logo.addEventListener("click",(evt)=>{
+    window.location.href="index.html";
+  })
+
+  const end_li_list = [].slice.call(document.querySelectorAll(".nested-ul > li"));
+  end_li_list.forEach((li)=>{
+    let path = li.getAttribute("path")
+    bindFetchLink(li,path);
+  });
 });
 
-function openHam(evt) {
-	var nonhomes = document.querySelector('.container-nonhomes');
-	let flag = Number(nonhomes.getAttribute('name'));
+function bindFetchLink(dom,path) {
+  dom.addEventListener("click", async (evt)=>{
+      showContent(path);
+      window.history.replaceState('page2', 'details', `index.html?page=${path}`);
+    });
+}
+
+async function showContent(path) {
+  let json = await fetchPage(`html/${path}.html`);
+  const content = document.querySelector("content");
+
+  if(json.code ==200){
+      content.innerHTML= json.body;
+  } else {
+      content.innerHTML = "<center><h2>There was an error in fetching page.</h2></center>";
+  }
+
+  let content_scrolltop = content.offsetTop;
+  console.log(content_scrolltop);
+  window.scroll({top : content_scrolltop, behavior : 'smooth' });
+}
+
+function fetchPage(pagePath){
+    var xhr = new XMLHttpRequest();
+
+  xhr.open('GET', pagePath, true);
+  xhr.send();
+
+  return new Promise(function(resolve,reject){
+    xhr.onload = () => {
+        if (xhr.status == 200) {
+          resolve({
+            code : 200,
+            message : "page fetch success",
+            body : xhr.response
+          });
+        } else {
+            resolve( {
+              code : xhr.status,
+              message : "error in fetching page.",
+              body : null
+            });
+        }
+      }
+  });
+
 }
 
 function changePic(evt) {
@@ -61,5 +115,4 @@ function changePic(evt) {
       }
     }
   }
-
 }

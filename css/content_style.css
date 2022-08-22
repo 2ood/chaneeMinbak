@@ -1,0 +1,14 @@
+content {
+	font-size: var(--normal-size);
+}
+content hr {
+	margin : 20px 0;
+}
+
+content ol.rule {
+	margin-inline-start : 20px;
+	font-size: var(--font-size-h6);
+}
+content li:not(:last-child){
+	margin-bottom : 10px;
+}

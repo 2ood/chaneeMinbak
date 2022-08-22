@@ -2,30 +2,39 @@
 <header>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-	<link rel ='stylesheet' href='css/contentStyle.css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel ='stylesheet' href='css/content_style.css'>
 	<link rel ='stylesheet' href='css/font.css'>
 	<script src = '../script/contentScript.js'></script>
+	<style>
+		h1.title {
+			text-align: center;
+		}
+		grid-3-7 {
+			display : inline-grid;
+			grid-template : 1fr / 3fr 7fr;
+			margin-top: 20px;
+		}
+
+		grid-3-7 > p {
+			display : inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
 </header>
 <body>
-	<center>
 		<h1 class='title'>주인장의 인사</h1>
 		<hr/>
-		<br/>
+		<grid-3-7>
 			<span class='ratio-9-16'><img id='jooinjang' src='img/joo-in-jang.jpeg'></span>
-		<p class='ment' style='color :#888;'> 
-			<span style='font-size:2em; line-height: 1em; height: 1em;'>"</span>
-			한국 최고의 스키장, 용평리조트로부터 10분 거리에 있는 [차니네 민박]으로 여러분을 초대합니다.<br/>
-			최고의 서비스로 모시겠습니다!<br/>
-			궁금한 점 있으면 QnA 남겨주세요~
-			<span style='font-size:2em; line-height: 1em; height: 1em;'>"</span>
-		</p>	
-	</center>
-	
+			<p class='ment'>
+				한국 최고의 스키장, 용평리조트로부터 10분 거리에 있는 [차니네 민박]으로 여러분을 초대합니다.<br/>
+				최고의 서비스로 모시겠습니다!<br/>
+				궁금한 점 있으면 QnA 남겨주세요~
+			</p>
+		</grid-3-7>
 
 </body>
 
 </html>
-	
-
-	
